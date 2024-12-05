@@ -1,38 +1,435 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+    background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+    display: flex;
+    gap: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ahome {
+    color: red;
 }
 
-.App-link {
-  color: #61dafb;
+li > a {
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#swiper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.mySwiper {
+    height: 100%;
+}
+
+.movie-slide {
+    height: 100%;
+    display: flex;
+    color: white;
+}
+
+.imgswiper {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.movie-info {
+    position: relative;
+    width: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 22%;
+    left: 10%;
+}
+
+.movie-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.movie-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.movie-details {
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.imdb-icon {
+    color: #f5c518;
+    margin-right: 5px;
+}
+
+.play-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background-color: #e67e22;
+}
+
+.play-icon {
+    font-size: 18px;
+}
+
+.trailer-container {
+    width: 560px;
+    height: 320px;
+    top: 20%;
+    left: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.trailer {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie-item {
+    color: white;
+}
+
+.movie-poster {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.kinoner {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: black;
+}
+
+.movies-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 100px;
+}
+
+.movie-item > img {
+    width: 300px;
+    height: 400px;
+}
+.footer {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #131313;
+    padding: 40px;
+}
+
+.footerinfo {
+    color: white;
+}
+
+.footerinfo > p {
+    width: 250px;
+}
+
+.contact-us {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    gap: 20px;
+}
+
+.contactusinfo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.contact-form > label > input {
+    width: 400px;
+    height: 30px;
+    padding: 20px;
+}
+
+.contact-form > button {
+    width: 140px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+}
+
+.about-us {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aboutusinfo {
+    color: white;
+    padding-bottom: 200px;
+}
+
+.aboutcompany {
+    color: white;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.aboutcompany > button {
+    width: 140px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.distributions {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.genres button {
+    padding: 10px 15px;
+    background-color: gray;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie {
+    text-align: center;
+}
+
+.movie > img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.genres > button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+}
+
+.genres > button.active {
+    background-color: red;
+    color: white;
+}
+.movie-card > a {
+    color: white;
+}
+
+.movie-card > a > img {
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.search-bar > input {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.movie-detailss {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.movie-imgess > h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.movie-imgess > p {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.movie-detailss > img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.movie-poster {
+    padding: 50px;
+    width: 950px;
+    height: 950px;
+}
+
+.trailer {
+    margin-top: 30px;
+}
+
+.trailer > iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+@media (max-width: 760px) {
+    #header {
+        justify-content: center;
+    }
+    .movie-info {
+        left: 10%;
+        width: 300px;
+        height: 350px;
+    }
+    .trailer-container {
+        left: 50%;
+        width: 300px;
+        height: 350px;
+    }
+    .kinoner {
+        height: 400vh;
+    }
+    .movies-list {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .footer {
+        height: 200vh;
+        display: grid;
+        grid-template-columns: auto;
+        flex-direction: column;
+    }
+    .footerinfo {
+        width: 100px;
+    }
+    .karta {
+        width: 100px;
+    }
+    .about-us {
+        height: 120vh;
+    }
+    .contact-us {
+        height: 200vh;
+    }
 }
